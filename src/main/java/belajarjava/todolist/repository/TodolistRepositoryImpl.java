@@ -59,7 +59,7 @@ public class TodolistRepositoryImpl implements TodolistRepository{
             entityManager.remove(todolist);
             System.out.println("Entity removed: ID=" + todolist.getId() + ", Name=" + todolist.getTodo());
         } else {
-            System.out.println("Entity not found with ID: " + todolist);
+            System.out.println("Entity not found with ID: " + todolist.getId());
         }
 
         entityTransaction.commit();
@@ -80,7 +80,7 @@ public class TodolistRepositoryImpl implements TodolistRepository{
             entityManager.merge(todolist);
             System.out.println("Entity removed: ID=" + todolist.getId() + ", Name=" + todolist.getTodo());
         } else {
-            System.out.println("Entity not found with ID: " + todolist);
+            System.out.println("Entity not found with ID: " + todolist.getId());
         }
 
         entityTransaction.commit();
